@@ -1,0 +1,20 @@
+{% extends "./layouts/base.html" %}
+{% block title %}
+    ONLYFLANS
+{% endblock  %}
+
+{% block content %}
+    <h1>ONLYFLANS</h1>
+    <p>La mejor tienda de flanes de la ciudad</p>
+    <div class="row">
+        {% for data in images  %}
+            <div class="col-4">
+                <img class="rounded-circle border border-warning m-2" 
+                    src="{{ data.img }}"
+                    alt="{{ data.img }}"
+                >
+                <p>{{ data.message }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock  %}
